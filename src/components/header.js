@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import { StyledHeader, StyledHeaderLink } from "../styles/StyledHeader"
-import Logo from "../images/code.png"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {

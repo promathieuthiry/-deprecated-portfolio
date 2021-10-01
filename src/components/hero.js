@@ -1,6 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import "./layout.css"
+import ReactLogo from "./reactLogo"
 import {
   StyledHero,
   StyledHeroName,
@@ -14,12 +15,6 @@ const Hero = () => {
   return (
     <>
       <StyledHero>
-        {/* <StaticImage
-          src="../images/hero-cover.svg"
-          alt=""
-          className="hero__image-cover"
-        /> */}
-
         <StaticImage
           src="../images/profile-pic.jpeg"
           alt="Profile picture Mathieu Thiry"
@@ -28,12 +23,14 @@ const Hero = () => {
         <StyledHeroName>Hi, I'm Mathieu</StyledHeroName>
 
         <StyledHeroTagline>
-          Building digital products, brands, and experience.
+          Building digital products and experience
         </StyledHeroTagline>
-
+        <div style={{ height: "30rem" }}>
+          <ReactLogo />
+        </div>
         <StyledHeroDescription>
-          A front end developer specialized in UI/UX Design, Responsive Web
-          Design, and Visual Development
+          Front end developer dedicated to create beautiful interface in taking
+          advantage of the React ecosystem
         </StyledHeroDescription>
         <Button>Connect with me</Button>
       </StyledHero>
