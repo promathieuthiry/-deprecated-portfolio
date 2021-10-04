@@ -18,3 +18,15 @@
   bottom: 10rem;
   height: auto;
 }
+
+.hero__image-wave-gif {
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(0.5rem);
+  margin-left: 1rem;
+}
+
+.services-img {
+  width: 50px;
+  height: auto;
+}

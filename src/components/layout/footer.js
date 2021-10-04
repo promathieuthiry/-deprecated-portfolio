@@ -1,6 +1,10 @@
 import * as React from "react"
 
-import { StyledFooter, StyledEmail, StyledBlob } from "../styles/StyledFooter"
+import {
+  StyledFooter,
+  StyledEmail,
+  StyledBlob,
+} from "../../styles/StyledFooter"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 

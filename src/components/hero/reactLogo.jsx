@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 
 import lottie from "lottie-web"
-import reactLogo from "../images/lottie/react-logo.json"
+import reactLogo from "../../images/lottie/react-logo.json"
 
 function ReactLogo() {
   useEffect(() => {

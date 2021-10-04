@@ -1,18 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Hero from "../components/hero"
+import Layout from "../components/layout/layout"
+import Hero from "../components/hero/hero"
 import Seo from "../components/seo"
+import Skills from "../components/skills/skills"
+import Services from "../components/services/services"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Hero />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Services />
+    <Skills />
   </Layout>
 )
 

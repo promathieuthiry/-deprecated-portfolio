@@ -1,14 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import { StyledHeader, StyledHeaderLink } from "../styles/StyledHeader"
+import { StyledHeader, StyledHeaderLink } from "../../styles/StyledHeader"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderLink to="/">
-        <StaticImage src="../images/code.png" alt="" />
+        <StaticImage src="../../images/code.png" alt="" />
         <p>Mathieu Thiry</p>
       </StyledHeaderLink>
       <ul>
