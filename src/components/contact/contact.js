@@ -34,8 +34,8 @@ const Contact = () => {
         ...inputData,
       }),
     })
-    //   .then(() => navigate("/thank-you/"))
-    //   .catch(error => alert(error))
+      .then(() => alert("Success"))
+      .catch(error => alert(error))
   }
 
   return (
@@ -44,49 +44,63 @@ const Contact = () => {
       <p className={description}>Interested in working together?</p>
       <div className={form_container}>
         <form
-          name="contact v2"
+          name="contact"
           method="post"
+          //   action="/thanks/"
           data-netlify="true"
-          onSubmit="submit"
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
-          <input type="hidden" name="form-name" value="contact v2" />
-
-          <div hidden>
-            <input name="bot-field" />
-          </div>
-
-          <div>
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          {/* <p hidden>
             <label>
-              First name
-              <br />
-              <input type="text" name="first-name" />
+              Don’t fill this out:{" "}
+              <input name="bot-field" onChange={handleChange} />
             </label>
-          </div>
-
-          <div>
+          </p> */}
+          <p>
             <label>
-              Last name
+              Your name
               <br />
-              <input type="text" name="last-name" />
+              <input
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={inputData.name}
+                placeholder="John Doe"
+                required
+              />
             </label>
-          </div>
-
-          <div>
-            <label htmlFor="email">Email</label>
-            <br />
-            <input id="email" type="email" name="email" />
-          </div>
-
-          <div>
+          </p>
+          <p>
             <label>
-              Any Comments?
+              Your email:
               <br />
-              <textarea name="comments"></textarea>
+              <input
+                type="email"
+                name="email"
+                onChange={handleChange}
+                value={inputData.email}
+                placeholder="jdoe@gmail.com"
+              />
             </label>
-          </div>
-
-          <button type="submit">Send</button>
+          </p>
+          <p>
+            <label>
+              Message:
+              <br />
+              <textarea
+                name="message"
+                onChange={handleChange}
+                value={inputData.message}
+                placeholder="describe your message"
+              />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
         </form>
       </div>
     </div>
