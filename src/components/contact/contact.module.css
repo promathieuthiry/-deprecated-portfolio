@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 2rem;
+  padding: 0rem 0rem 4rem 0rem;
+  color: #9ea0ab;
+  text-align: center;
+}
+
+.form_container {
+  width: 80%;
+  background: #232631;
+  box-shadow: 0.5rem 0.5rem 0.8rem 0.4rem rgba(0, 0, 0, 0.0991282);
+  border-radius: 0.34rem;
+  padding: 2.6rem;
+}

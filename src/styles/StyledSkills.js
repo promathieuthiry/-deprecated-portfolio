@@ -4,12 +4,7 @@ export const StyledWrapper = styled.section`
   width: 100%;
   padding: 0rem 0rem 4.5rem 0rem;
 `
-export const StyledSkillsTitle = styled.h3`
-  font-family: "Raleway", sans-serif;
-  font-size: 3.5rem;
-  padding-bottom: 3rem;
-  text-align: center;
-`
+
 export const StyledSkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -26,7 +21,6 @@ export const StyleSkillsIcon = styled.div`
   align-items: center;
   padding: 2rem;
   min-height: 13rem;
-  /* transition: all 5s ease-out; */
 
   &:hover {
     svg {
@@ -58,7 +52,7 @@ export const StyledCheckboxWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2.5rem;
+  padding-bottom: 5rem;
 
   div {
     width: 5.6rem;
@@ -90,20 +84,23 @@ export const StyledCheckboxWrapper = styled.div`
 `
 
 export const StyledLabel1 = styled.p`
-  font-size: 1.6rem;
+  font-size: 3rem;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: ${props => (props.isToolsSelected ? "#9ea0ab" : "#FFF")};
   opacity: ${props => (props.isToolsSelected ? "0.5" : "1")};
+  transform: ${props => (props.isToolsSelected ? "scale(0.9)" : "scale(1)")};
+  transition: all 0.5s ease-out;
   cursor: pointer;
 `
 
 export const StyledLabel2 = styled.p`
-  font-size: 1.6rem;
+  font-size: 3rem;
+  transform: ${props => (props.isToolsSelected ? "scale(1)" : "scale(0.9)")};
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: ${props => (props.isToolsSelected ? "#FFF" : "#9ea0ab")};
   opacity: ${props => (props.isToolsSelected ? "1" : "0.5")};
-
+  transition: all 0.5s ease-out;
   cursor: pointer;
 `

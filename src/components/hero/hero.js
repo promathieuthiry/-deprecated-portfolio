@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../layout/layout.css"
 import ReactLogo from "./reactLogo"
 import WaveGif from "../../images/wave.gif"
+
 import {
   StyledHero,
   StyledHeroName,
@@ -17,7 +18,7 @@ const Hero = () => {
     <>
       <StyledHero>
         <StaticImage
-          src="../images/profile-pic.jpeg"
+          src="../../images/profile-pic.jpeg"
           alt="Profile picture Mathieu Thiry"
           className="hero__image-profile"
         />

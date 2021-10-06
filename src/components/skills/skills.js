@@ -23,10 +23,7 @@ import { Visualstudiocode } from "@icons-pack/react-simple-icons"
 import { Express } from "@icons-pack/react-simple-icons"
 import { Html5 } from "@icons-pack/react-simple-icons"
 import { Hyper } from "@icons-pack/react-simple-icons"
-import { Insomnia } from "@icons-pack/react-simple-icons"
 import { Jamstack } from "@icons-pack/react-simple-icons"
-import { Jira } from "@icons-pack/react-simple-icons"
-import { Mailchimp } from "@icons-pack/react-simple-icons"
 import { Mapbox } from "@icons-pack/react-simple-icons"
 import { Mysql } from "@icons-pack/react-simple-icons"
 import { Netlify } from "@icons-pack/react-simple-icons"
@@ -35,7 +32,6 @@ import { WebThreeDotjs } from "@icons-pack/react-simple-icons"
 
 import {
   StyledWrapper,
-  StyledSkillsTitle,
   StyledSkillsGrid,
   StyleSkillsIcon,
   StyledCheckboxWrapper,
@@ -59,7 +55,6 @@ function Skills() {
   }
   return (
     <StyledWrapper>
-      {/* <StyledSkillsTitle>Skills</StyledSkillsTitle> */}
       <StyledCheckboxWrapper isToolsSelected={isToolsSelected}>
         <StyledLabel1
           onClick={handleTechnicalSkillsBox}
@@ -169,6 +164,10 @@ function Skills() {
             <StyleSkillsIcon originalColor="#1770B0">
               <Expo />
               <p>Expo</p>
+            </StyleSkillsIcon>
+            <StyleSkillsIcon originalColor="#0081CB">
+              <Materialui />
+              <p>Materialui</p>
             </StyleSkillsIcon>
             <StyleSkillsIcon originalColor="#FF6C37">
               <Postman />
