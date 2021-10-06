@@ -44,46 +44,49 @@ const Contact = () => {
       <p className={description}>Interested in working together?</p>
       <div className={form_container}>
         <form
-          name="contact"
+          name="contact v2"
           method="post"
-          //   action="/thanks/"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          //   onSubmit={handleSubmit}
           onSubmit="submit"
+          data-netlify-honeypot="bot-field"
         >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
+          <input type="hidden" name="form-name" value="contact v2" />
+
+          <div hidden>
+            <input name="bot-field" />
+          </div>
+
+          <div>
             <label>
-              Don’t fill this out:{" "}
-              <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your name
+              First name
               <br />
-              <input type="text" name="name" onChange={handleChange} required />
+              <input type="text" name="first-name" />
             </label>
-          </p>
-          <p>
+          </div>
+
+          <div>
             <label>
-              Your email:
+              Last name
               <br />
-              <input type="email" name="email" onChange={handleChange} />
+              <input type="text" name="last-name" />
             </label>
-          </p>
-          <p>
+          </div>
+
+          <div>
+            <label htmlFor="email">Email</label>
+            <br />
+            <input id="email" type="email" name="email" />
+          </div>
+
+          <div>
             <label>
-              Message:
+              Any Comments?
               <br />
-              <textarea name="message" onChange={handleChange} />
+              <textarea name="comments"></textarea>
             </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
+          </div>
+
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
