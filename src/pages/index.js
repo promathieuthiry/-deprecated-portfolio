@@ -12,8 +12,8 @@ const IndexPage = () => (
     <Seo title="Home" />
     <Hero />
     <Services />
-    <Skills />
     <Portfolio />
+    <Skills />
     <Contact />
   </Layout>
 )

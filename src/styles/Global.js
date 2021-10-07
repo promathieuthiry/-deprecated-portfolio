@@ -9,6 +9,10 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   box-sizing: inherit;
 }
+*:focus {
+    outline: none;
+}
+
 
 html {
   box-sizing: border-box;
@@ -31,6 +35,9 @@ export const StyledWrapper = styled.div`
   max-width: 144rem;
   margin: 0 auto;
   padding: 2rem 4rem;
+  @media only screen and (max-width: 675px) {
+    padding: 0.5rem 4rem;
+  }
 `
 
 export default GlobalStyles

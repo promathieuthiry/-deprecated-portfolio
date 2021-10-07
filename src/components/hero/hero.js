@@ -34,8 +34,8 @@ const Hero = () => {
           <ReactLogo />
         </div>
         <StyledHeroDescription>
-          Front end developer dedicated to create beautiful interface in taking
-          advantage of the React ecosystem
+          Mid React developer dedicated to create beautiful interface in taking
+          advantage of the React ecosystem. 2 years of experience with React.
         </StyledHeroDescription>
         <Button>Connect with me</Button>
       </StyledHero>

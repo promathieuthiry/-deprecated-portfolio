@@ -2,7 +2,10 @@ import styled from "styled-components"
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  padding: 0rem 0rem 4.5rem 0rem;
+  padding: 8rem 0rem 4.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const StyledSkillsGrid = styled.div`
@@ -10,6 +13,7 @@ export const StyledSkillsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   border-top: 0.1rem solid #9ea0ab;
   border-left: 0.1rem solid #9ea0ab;
+  width: 80%;
 `
 
 export const StyleSkillsIcon = styled.div`
@@ -66,6 +70,10 @@ export const StyledCheckboxWrapper = styled.div`
     &:hover {
       opacity: 0.9;
     }
+
+    @media only screen and (max-width: 600px) {
+      margin: 0rem 1.5rem;
+    }
   }
 
   span {
@@ -92,6 +100,10 @@ export const StyledLabel1 = styled.p`
   transform: ${props => (props.isToolsSelected ? "scale(0.9)" : "scale(1)")};
   transition: all 0.5s ease-out;
   cursor: pointer;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1.8rem;
+  }
 `
 
 export const StyledLabel2 = styled.p`
@@ -103,4 +115,8 @@ export const StyledLabel2 = styled.p`
   opacity: ${props => (props.isToolsSelected ? "1" : "0.5")};
   transition: all 0.5s ease-out;
   cursor: pointer;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1.8rem;
+  }
 `

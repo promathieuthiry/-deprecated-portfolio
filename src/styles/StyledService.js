@@ -2,14 +2,14 @@ import styled from "styled-components"
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  padding: 4.5rem 0rem 8.5rem 0rem;
+  padding: 4.5rem 0rem 12.5rem 0rem;
   text-align: center;
 `
 
 export const StyledService = styled.h3`
   font-family: "Raleway", sans-serif;
   font-size: 3.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 `
 
 export const StyledGridContainer = styled.div`
@@ -33,6 +33,10 @@ export const StyledCardMain = styled.div`
   border-radius: 0.34rem;
   padding: 2.6rem 2.6rem 2.6rem 2.6rem;
   transform: scale(1.3);
+
+  @media only screen and (max-width: 1100px) {
+    transform: scale(1);
+  }
 `
 
 export const StyledCardTitle = styled.p`

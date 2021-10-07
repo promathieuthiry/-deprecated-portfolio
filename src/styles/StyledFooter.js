@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
 export const StyledFooter = styled.footer`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   width: 100%;
   border-top: 0.1rem solid #9ea0ab;
   padding-top: 4rem;
   ul {
     display: flex;
     list-style-type: none;
-    flex: 1;
   }
   li {
     color: #9ea0ab;
@@ -39,7 +39,7 @@ export const StyledEmail = styled.div`
     z-index: 2;
     font-size: 2.5rem;
   }
-  p {
+  a {
     font-family: "Raleway", sans-serif;
     font-size: 2rem;
     font-weight: bold;

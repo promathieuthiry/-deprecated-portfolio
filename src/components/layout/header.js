@@ -1,10 +1,19 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import { onLinkClick } from "../../helpers/scrool"
 import { StyledHeader, StyledHeaderLink } from "../../styles/StyledHeader"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
+  // function onLinkClick() {
+  //   return document.getElementById("contact_section").scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //     inline: "nearest",
+  //   })
+  // }
+
   return (
     <StyledHeader>
       <StyledHeaderLink to="/">
@@ -16,11 +25,10 @@ const Header = () => {
           <Link to="/404">About</Link>
         </li>
         <li>
-          {" "}
           <Link to="/404">Works</Link>
         </li>
         <li>
-          <Link to="/404">Contact</Link>
+          <div onClick={onLinkClick}>Contact</div>
         </li>
       </ul>
     </StyledHeader>

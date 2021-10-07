@@ -24,10 +24,10 @@ const Services = () => {
               className="services-img "
             />
 
-            <StyledCardTitle>Designer</StyledCardTitle>
+            <StyledCardTitle>Design</StyledCardTitle>
             <StyledCardDescription>
               I value simple content structure, clean design patterns, and
-              thoughtful interactions.
+              thoughtful interactions. I like working with figma.
             </StyledCardDescription>
           </StyledCard>
           <StyledCardMain>
@@ -36,8 +36,10 @@ const Services = () => {
               alt=""
               className="services-img "
             />
-            <StyledCardTitle style={{ color: "#1c3246" }}>
-              Front-End Developer
+            <StyledCardTitle
+              style={{ color: "#1c3246", textTransform: "uppercase" }}
+            >
+              Mid React Developer
             </StyledCardTitle>
             <StyledCardDescription>
               I like to code things from scratch, and enjoy bringing ideas to
@@ -50,10 +52,11 @@ const Services = () => {
               alt=""
               className="services-img "
             />
-            <StyledCardTitle>Back-End Developer</StyledCardTitle>
+            <StyledCardTitle>Back-End Development</StyledCardTitle>
             <StyledCardDescription>
-              I like to code things from scratch, and enjoy bringing ideas to
-              life in the browser.
+              Experience with nodejs, express and MySQL learned on my own to
+              achieve sideproject. Implementing feature like authentification,
+              upload of image...
             </StyledCardDescription>
           </StyledCard>
         </StyledGridContainer>

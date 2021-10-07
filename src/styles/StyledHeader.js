@@ -33,6 +33,9 @@ export const StyledHeader = styled.header`
     li {
       font-size: 1.5rem;
     }
+    div {
+      cursor: pointer;
+    }
   }
 `
 export const StyledHeaderLink = styled(props => <Link {...props} />)`

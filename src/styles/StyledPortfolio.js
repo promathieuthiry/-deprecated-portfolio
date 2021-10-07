@@ -8,12 +8,12 @@ export const StyledWrapper = styled.section`
 export const StyledPortfolioTitle = styled.h3`
   font-family: "Raleway", sans-serif;
   font-size: 3.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
   text-align: center;
 `
 export const StyledPortfolioDescription = styled.p`
   font-size: 2rem;
-  padding: 0rem 0rem 4rem 0rem;
+  padding: 0rem 0rem 6rem 0rem;
   color: #9ea0ab;
   text-align: center;
 `
@@ -23,7 +23,11 @@ export const StyledPortfolioGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
-  width: 100%;
+  max-width: 100%;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
 `
 
 export const StyledPortofolioCard = styled.div`

@@ -7,7 +7,7 @@
 .image {
   height: auto;
   max-width: 60rem;
-  min-width: 40rem;
+  /* min-width: 40rem; */
   border-radius: 0.6rem;
   transition: 0.4s ease;
 }

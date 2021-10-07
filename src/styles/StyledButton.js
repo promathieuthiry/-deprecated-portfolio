@@ -10,12 +10,17 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 1.8rem;
   line-height: 1.9rem;
-  padding: 1.9rem 6rem;
+  padding: ${props => (props.padding ? props.padding : "1.9rem 6rem")};
   cursor: pointer;
 
   &:hover {
     transform: translateY(-3px);
   }
   &:active {
+  }
+
+  @media only screen and (max-width: 374px) {
+    font-size: 1.2rem;
+    /* padding: 1rem 2rem; */
   }
 `
