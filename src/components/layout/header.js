@@ -1,7 +1,12 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import { onLinkClick } from "../../helpers/scrool"
+import {
+  onLinkClick,
+  addOverflow,
+  removeOverflow,
+  getWindowDimensions,
+} from "../../helpers/utils"
 import { StyledHeader, StyledHeaderLink } from "../../styles/StyledHeader"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -9,10 +14,17 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { icon_menu, barswrapper, bars } from "./header.module.css"
 const Header = () => {
   const [open, setOpen] = useState(false)
-
+  // console.log(getWindowDimensions())
   function Open() {
-    setOpen(!open)
+    if (open) {
+      removeOverflow()
+      setOpen(!open)
+    } else {
+      addOverflow()
+      setOpen(!open)
+    }
   }
+
   return (
     <StyledHeader>
       <StyledHeaderLink to="/">
@@ -22,14 +34,14 @@ const Header = () => {
 
       {/* Desktop Navbar */}
       <ul>
-        <li>
+        {/* <li>
           <Link to="/404">About</Link>
+        </li> */}
+        <li>
+          <div onClick={() => onLinkClick("portfolio_section")}>Works</div>
         </li>
         <li>
-          <Link to="/404">Works</Link>
-        </li>
-        <li>
-          <div onClick={onLinkClick}>Contact</div>
+          <div onClick={() => onLinkClick("contact_section")}>Contact</div>
         </li>
       </ul>
       {/* End Desktop Navbar */}
@@ -51,14 +63,14 @@ const Header = () => {
       {/* Start Mobile Navbar */}
       {open && (
         <div className={barswrapper}>
-          <div className={bars}>
+          {/* <div className={bars}>
             <Link to="/404">About</Link>
+          </div> */}
+          <div className={bars}>
+            <div onClick={() => onLinkClick("portfolio_section")}>Works</div>
           </div>
           <div className={bars}>
-            <Link to="/404">Works</Link>
-          </div>
-          <div className={bars}>
-            <div onClick={onLinkClick}>Contact</div>
+            <div onClick={() => onLinkClick("contact_section")}>Contact</div>
           </div>
         </div>
       )}

@@ -1,5 +1,6 @@
 .icon_menu {
   display: none;
+  opacity: 0;
 }
 
 .barswrapper {
@@ -12,6 +13,7 @@
 @media screen and (max-width: 600px) {
   .icon_menu {
     display: block;
+    opacity: 1;
   }
   .barswrapper {
     display: block;

@@ -14,7 +14,7 @@ import { image } from "./images-portfolio.module.css"
 
 const Portfolio = () => {
   return (
-    <>
+    <div id="portfolio_section">
       <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
       <StyledPortfolioDescription>
         Here are a few projects I've worked on recently.
@@ -70,7 +70,7 @@ const Portfolio = () => {
           <span>A landing page for a podcast based on a figma design</span>
         </StyledPortofolioCard>
       </StyledPortfolioGrid>
-    </>
+    </div>
   )
 }
 

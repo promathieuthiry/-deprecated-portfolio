@@ -3,6 +3,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../layout/layout.css"
 import ReactLogo from "./reactLogo"
 import WaveGif from "../../images/wave.gif"
+import TypeWriter from "./typeWriter"
+import { gradient_text } from "./hero.module.css"
 
 import {
   StyledHero,
@@ -10,7 +12,7 @@ import {
   StyledHeroTagline,
   StyledHeroDescription,
 } from "../../styles/StyledHero"
-import { onLinkClick } from "../../helpers/scrool"
+import { onLinkClick } from "../../helpers/utils"
 import { Button } from "../../styles/StyledButton"
 
 const Hero = () => {
@@ -28,7 +30,8 @@ const Hero = () => {
         </StyledHeroName>
 
         <StyledHeroTagline>
-          Building digital products and experience
+          Building digital products like
+          <TypeWriter />
         </StyledHeroTagline>
         <div style={{ height: "30rem" }}>
           <ReactLogo />
@@ -37,7 +40,9 @@ const Hero = () => {
           Mid React developer dedicated to create beautiful interface in taking
           advantage of the React ecosystem. 2 years of experience with React.
         </StyledHeroDescription>
-        <Button onClick={onLinkClick}>Connect with me</Button>
+        <Button onClick={() => onLinkClick("contact_section")}>
+          Connect with me
+        </Button>
       </StyledHero>
     </>
   )
