@@ -10,13 +10,15 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import {
+  faTwitter,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 import Blob from "../../images/blob.inline.svg"
-function Footer() {
+function Footer({ notdisplayBorderTop }) {
   return (
-    <StyledFooter>
+    <StyledFooter notdisplayBorderTop={notdisplayBorderTop}>
       <ul>
         <li>
           <a

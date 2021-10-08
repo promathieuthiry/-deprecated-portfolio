@@ -10,7 +10,7 @@ import {
   StyledHeroTagline,
   StyledHeroDescription,
 } from "../../styles/StyledHero"
-
+import { onLinkClick } from "../../helpers/scrool"
 import { Button } from "../../styles/StyledButton"
 
 const Hero = () => {
@@ -37,7 +37,7 @@ const Hero = () => {
           Mid React developer dedicated to create beautiful interface in taking
           advantage of the React ecosystem. 2 years of experience with React.
         </StyledHeroDescription>
-        <Button>Connect with me</Button>
+        <Button onClick={onLinkClick}>Connect with me</Button>
       </StyledHero>
     </>
   )

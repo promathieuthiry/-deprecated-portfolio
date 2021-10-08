@@ -7,7 +7,6 @@
 .image {
   height: auto;
   max-width: 60rem;
-  /* min-width: 40rem; */
   border-radius: 0.6rem;
   transition: 0.4s ease;
 }
@@ -68,4 +67,34 @@
 
 .button_link:hover {
   filter: brightness(110%);
+}
+
+@media only screen and (max-width: 600px) {
+  .button_outline {
+    top: 30%;
+    left: 35%;
+    position: absolute;
+  }
+
+  .button_link {
+    top: 60%;
+    left: 32%;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .button_outline {
+    top: 30%;
+    left: 35%;
+    position: absolute;
+    padding: 1rem 1.5rem;
+  }
+
+  .button_link {
+    top: 60%;
+    left: 32%;
+    position: absolute;
+    padding: 1rem 1.5rem;
+  }
 }

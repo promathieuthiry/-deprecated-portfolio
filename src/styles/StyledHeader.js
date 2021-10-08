@@ -7,9 +7,9 @@ export const StyledHeader = styled.header`
   padding: 1rem;
   display: flex;
   align-items: center;
-
-  ul {
-    list-style-type: none;
+  position: relative;
+  @media screen and (max-width: 600px) {
+    padding: 1rem 0rem;
   }
 
   img {
@@ -29,7 +29,11 @@ export const StyledHeader = styled.header`
   ul {
     display: flex;
     gap: 2rem;
+    list-style-type: none;
 
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
     li {
       font-size: 1.5rem;
     }

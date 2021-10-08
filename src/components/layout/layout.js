@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Header />
       {children}
-      <Footer />
+      <Footer notdisplayBorderTop={true} />
     </StyledWrapper>
   )
 }

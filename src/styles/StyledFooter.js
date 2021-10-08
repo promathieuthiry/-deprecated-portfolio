@@ -4,7 +4,8 @@ export const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   width: 100%;
-  border-top: 0.1rem solid #9ea0ab;
+  border-top: ${props =>
+    props.notdisplayBorderTop ? "" : "0.1rem solid #9ea0ab"};
   padding-top: 4rem;
   ul {
     display: flex;

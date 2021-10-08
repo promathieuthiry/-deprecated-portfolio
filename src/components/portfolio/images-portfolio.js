@@ -15,21 +15,19 @@ const ImagesPortfolio = ({ codeLink, websiteLink, children }) => {
   return (
     <div className={container}>
       {children}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div className={image_overlay}>
-          <a href={codeLink} target="_blank" rel="noreferrer">
-            <button className={button_outline}>
-              <FontAwesomeIcon icon={faGithub} />
-              &nbsp;&nbsp;Code
-            </button>
-          </a>
-          <a href={websiteLink} target="_blank" rel="noreferrer">
-            <button className={button_link}>
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-              &nbsp;&nbsp;Website
-            </button>
-          </a>
-        </div>
+      <div className={image_overlay}>
+        <a href={codeLink} target="_blank" rel="noreferrer">
+          <button className={button_outline}>
+            <FontAwesomeIcon icon={faGithub} />
+            &nbsp;&nbsp;Code
+          </button>
+        </a>
+        <a href={websiteLink} target="_blank" rel="noreferrer">
+          <button className={button_link}>
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            &nbsp;&nbsp;Website
+          </button>
+        </a>
       </div>
     </div>
   )
