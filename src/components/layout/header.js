@@ -25,6 +25,11 @@ const Header = () => {
     }
   }
 
+  function onLink(section) {
+    Open()
+    onLinkClick(section)
+  }
+
   return (
     <StyledHeader>
       <StyledHeaderLink to="/">
@@ -38,10 +43,10 @@ const Header = () => {
           <Link to="/404">About</Link>
         </li> */}
         <li>
-          <div onClick={() => onLinkClick("portfolio_section")}>Works</div>
+          <div onClick={() => onLink("portfolio_section")}>Works</div>
         </li>
         <li>
-          <div onClick={() => onLinkClick("contact_section")}>Contact</div>
+          <div onClick={() => onLink("contact_section")}>Contact</div>
         </li>
       </ul>
       {/* End Desktop Navbar */}
@@ -67,10 +72,10 @@ const Header = () => {
             <Link to="/404">About</Link>
           </div> */}
           <div className={bars}>
-            <div onClick={() => onLinkClick("portfolio_section")}>Works</div>
+            <div onClick={() => onLink("portfolio_section")}>Works</div>
           </div>
           <div className={bars}>
-            <div onClick={() => onLinkClick("contact_section")}>Contact</div>
+            <div onClick={() => onLink("contact_section")}>Contact</div>
           </div>
         </div>
       )}

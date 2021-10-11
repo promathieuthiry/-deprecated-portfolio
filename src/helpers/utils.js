@@ -1,4 +1,5 @@
 export function onLinkClick(section) {
+  removeOverflow()
   return document.getElementById(section).scrollIntoView({
     behavior: "smooth",
     block: "start",
