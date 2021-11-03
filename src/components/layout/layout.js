@@ -1,8 +1,8 @@
 import * as React from "react"
 
 import Header from "./header"
-import Footer from "./footer"
-
+import Footer from "./footer/footer"
+import Contact from "../contact/contact"
 import { StyledWrapper } from "../../styles/Global"
 import GlobalStyles from "../../styles/Global"
 
@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Header />
       {children}
+      <Contact />
       <Footer notdisplayBorderTop={true} />
     </StyledWrapper>
   )

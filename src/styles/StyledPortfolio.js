@@ -23,18 +23,18 @@ export const StyledPortfolioGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
-  max-width: 100%;
-
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 `
 
 export const StyledPortofolioCard = styled.div`
-  justify-self: center;
   display: flex;
   flex-direction: column;
 
+  @media only screen and (max-width: 1330px) {
+    margin: auto;
+  }
   p {
     font-family: "Raleway", sans-serif;
     font-size: 2.8rem;

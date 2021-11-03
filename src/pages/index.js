@@ -6,16 +6,33 @@ import Skills from "../components/skills/skills"
 import Services from "../components/services/services"
 import Portfolio from "../components/portfolio/portfolio"
 import Contact from "../components/contact/contact"
+import { graphql } from "gatsby"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
     <Hero />
     <Services />
-    <Portfolio />
+    <Portfolio img={data} />
     <Skills />
-    <Contact />
+    {/* <Contact /> */}
   </Layout>
 )
+
+export const portfolioQuery = graphql`
+  {
+    allFile(filter: { relativeDirectory: { eq: "preview" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData
+          }
+          name
+          ext
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

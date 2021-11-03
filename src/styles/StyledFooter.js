@@ -1,4 +1,8 @@
+import React from "react"
 import styled from "styled-components"
+import Blob from "../images/blob.inline.svg"
+import { CustomIcon } from "../styles/StyledIcon"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 export const StyledFooter = styled.footer`
   display: grid;
@@ -28,28 +32,70 @@ export const StyledFooter = styled.footer`
   }
 `
 
-export const StyledEmail = styled.div`
+export const EmailWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   z-index: 2;
 
-  span {
-    display: block;
-    z-index: 2;
-    font-size: 2.5rem;
+  @media only screen and (max-width: 675px) {
+    justify-self: start;
+    padding-left: 3rem;
+    margin-top: 2rem;
   }
-  a {
-    font-family: "Raleway", sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    padding-left: 5rem;
+
+  /* svg {
+    position: absolute;
+    top: -3.2rem;
+    right: 25rem;
+    @media only screen and (max-width: 675px) {
+      top: -4.8rem;
+      right: 18rem;
+    }
+  } */
+`
+
+const StyledBlob = styled(Blob)`
+  position: absolute;
+  top: -3.2rem;
+  right: 25rem;
+  @media only screen and (max-width: 675px) {
+    top: -4.8rem;
+    right: 18rem;
   }
 `
 
-export const StyledBlob = styled.svg`
-  position: absolute;
-  top: -3.2rem;
-  right: 9.9rem;
+export const IconWrapper = styled.span`
+  display: block;
+  z-index: 2;
+  font-size: 2.5rem;
 `
+
+export const Link = styled.a.attrs(props => ({
+  target: "_blank",
+  href: props.href,
+}))`
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 5rem;
+
+  @media only screen and (max-width: 675px) {
+    font-size: 1.5rem;
+  }
+`
+
+export const Email = () => {
+  return (
+    <EmailWrapper>
+      <StyledBlob />
+      <IconWrapper>
+        <CustomIcon icon={faEnvelope} href="mailto:promathieuthiry@gmail.com" />
+      </IconWrapper>
+      <Link href="mailto:promathieuthiry@gmail.com">
+        promathieuthiry@gmail.com
+      </Link>
+    </EmailWrapper>
+  )
+}

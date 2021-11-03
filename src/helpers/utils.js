@@ -17,7 +17,14 @@ export function removeOverflow() {
   return body.style.removeProperty("overflow")
 }
 
-// export function getWindowDimensions() {
-//   const { innerWidth: width } = window
-//   return width
-// }
+export function filterImage(arr, filename) {
+  for (let item of arr) {
+    if (item?.node?.name + item?.node?.ext === filename) {
+      return item?.node?.childImageSharp?.gatsbyImageData
+    }
+  }
+}
+
+export function filterImagesFeatured(arr) {
+  return arr.filter(item => item.featured)
+}

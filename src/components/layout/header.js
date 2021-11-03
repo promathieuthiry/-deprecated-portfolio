@@ -39,11 +39,8 @@ const Header = () => {
 
       {/* Desktop Navbar */}
       <ul>
-        {/* <li>
-          <Link to="/404">About</Link>
-        </li> */}
         <li>
-          <div onClick={() => onLink("portfolio_section")}>Works</div>
+          <Link to="/works">Works</Link>
         </li>
         <li>
           <div onClick={() => onLink("contact_section")}>Contact</div>

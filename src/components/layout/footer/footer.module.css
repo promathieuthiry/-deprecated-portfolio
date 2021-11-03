@@ -1,10 +1,10 @@
-.email_container {
+/* .email_container {
   justify-self: end;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 2;
-}
+} */
 
 .email_logo_wrapper {
   display: block;

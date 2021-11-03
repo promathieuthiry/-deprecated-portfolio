@@ -1,5 +1,6 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import {
   StyledPortfolioTitle,
@@ -11,8 +12,10 @@ import "../layout/layout.css"
 
 import ImagesPortfolio from "./images-portfolio"
 import { image } from "./images-portfolio.module.css"
+import { images } from "../data/data"
+import { filterImage, filterImagesFeatured } from "../../helpers/utils"
 
-const Portfolio = () => {
+const Portfolio = ({ img }) => {
   return (
     <div id="portfolio_section">
       <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
@@ -20,55 +23,24 @@ const Portfolio = () => {
         Here are a few projects I've worked on recently.
       </StyledPortfolioDescription>
       <StyledPortfolioGrid>
-        <StyledPortofolioCard>
-          <ImagesPortfolio
-            codeLink="https://github.com/promathieuthiry/frontend_mentor/tree/main/fm11-fylo-dark-theme-landing-page-master"
-            websiteLink="https://frontend-mentor-promathieuthiry.netlify.app/fm11-fylo-dark-theme-landing-page-master/index.html"
-          >
-            <StaticImage
-              src="../../images/preview-project-fylo-data-storage.jpeg"
-              alt="Preview project Fylo-Data-Storage"
-              className={image}
-            />
-          </ImagesPortfolio>
-          <p>Fylo landing page</p>
-          <span>
-            Corporate website for data storage. Dark theme website based on a
-            figma design
-          </span>
-        </StyledPortofolioCard>
-
-        <StyledPortofolioCard>
-          <ImagesPortfolio
-            codeLink="https://github.com/promathieuthiry/frontend_mentor/tree/main/fm8-pricing-component-with-toggle-master"
-            websiteLink="https://frontend-mentor-promathieuthiry.netlify.app/fm8-pricing-component-with-toggle-master/index.html"
-          >
-            <StaticImage
-              src="../../images/preview-project-price-component.jpg"
-              alt="Preview project Price component"
-              className={image}
-            />
-          </ImagesPortfolio>
-          <p>Price component</p>
-          <span>
-            A pricing component with toggle solution based on a figma design
-          </span>
-        </StyledPortofolioCard>
-
-        <StyledPortofolioCard>
-          <ImagesPortfolio
-            codeLink="https://github.com/promathieuthiry/frontend_mentor/tree/main/fm4-pod-request-access-landing-page"
-            websiteLink="https://frontend-mentor-promathieuthiry.netlify.app/fm4-pod-request-access-landing-page/index.html"
-          >
-            <StaticImage
-              src="../../images/preview-project-pod-request-project.jpeg"
-              alt="Preview project landing page podcasts"
-              className={image}
-            />
-          </ImagesPortfolio>
-          <p>Pod landing page</p>
-          <span>A landing page for a podcast based on a figma design</span>
-        </StyledPortofolioCard>
+        {filterImagesFeatured(images).map(item => {
+          const { githubUrl, livesiteUrl, filename, title, description } = item
+          return (
+            <StyledPortofolioCard key={item.id}>
+              <ImagesPortfolio codeLink={githubUrl} websiteLink={livesiteUrl}>
+                <GatsbyImage
+                  image={filterImage(img.allFile.edges, filename)}
+                  alt={`Preview ${title}`}
+                  className={image}
+                />
+              </ImagesPortfolio>
+              <div style={{ maxWidth: "60rem" }}>
+                <p>{title}</p>
+                <span>{description}</span>
+              </div>
+            </StyledPortofolioCard>
+          )
+        })}
       </StyledPortfolioGrid>
     </div>
   )

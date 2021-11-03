@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import {
   wrapper,
@@ -6,7 +6,6 @@ import {
   description,
   form_container,
   cover_wrapper,
-  cover,
 } from "./contact.module.css"
 import MailCover from "./mailCover"
 import Form from "./form"
