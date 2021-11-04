@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import {
   StyledPortfolioTitle,
@@ -8,7 +8,6 @@ import {
   StyledPortofolioCard,
   StyledPortfolioDescription,
 } from "../../styles/StyledPortfolio"
-import "../layout/layout.css"
 
 import ImagesPortfolio from "./images-portfolio"
 import { image } from "./images-portfolio.module.css"
@@ -25,12 +24,6 @@ const Portfolio = ({ img, featured }) => {
           : "I am constantly exploring new technologies and creative designs to develop projects that build on and go beyond my existing knowledge."}
       </StyledPortfolioDescription>
 
-      {/* <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
-      <StyledPortfolioDescription>
-        Here are a few projects I've worked on recently.
-      </StyledPortfolioDescription>
-
-      I am constantly exploring new technologies and creative designs to develop projects that build on and go beyond my existing knowledge. */}
       <StyledPortfolioGrid>
         {filterImagesFeatured(images, featured).map(item => {
           const { githubUrl, livesiteUrl, filename, title, description } = item

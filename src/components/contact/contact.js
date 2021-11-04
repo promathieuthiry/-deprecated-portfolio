@@ -4,7 +4,6 @@ import {
   wrapper,
   title,
   description,
-  form_container,
   cover_wrapper,
 } from "./contact.module.css"
 import MailCover from "./mailCover"
@@ -16,7 +15,7 @@ const Contact = () => {
       <div className={cover_wrapper}>
         <MailCover />
       </div>
-      <div className={form_container}>
+      <div>
         <h3 className={title}>Get in touch</h3>
         <p className={description}>Interested in working together?</p>
         <Form />

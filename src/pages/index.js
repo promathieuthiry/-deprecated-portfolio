@@ -5,7 +5,6 @@ import Seo from "../components/seo"
 import Skills from "../components/skills/skills"
 import Services from "../components/services/services"
 import Portfolio from "../components/portfolio/portfolio"
-import Contact from "../components/contact/contact"
 import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => (

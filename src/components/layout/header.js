@@ -1,13 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { gradient_text } from "../../styles/global.module.css"
 
-import {
-  onLinkClick,
-  addOverflow,
-  removeOverflow,
-  getWindowDimensions,
-} from "../../helpers/utils"
+import { onLinkClick, addOverflow, removeOverflow } from "../../helpers/utils"
 import { StyledHeader, StyledHeaderLink } from "../../styles/StyledHeader"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -42,17 +36,17 @@ const Header = () => {
       {/* Desktop Navbar */}
       <ul>
         <li>
-          <Link to="/" activeClassName={gradient_text}>
+          <Link to="/" activeClassName="gradient_text">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/works" activeClassName={gradient_text}>
+          <Link to="/works" activeClassName="gradient_text">
             Works
           </Link>
         </li>
         <li>
-          <Link to="/contact" activeClassName={gradient_text}>
+          <Link to="/contact" activeClassName="gradient_text">
             Contact
           </Link>
         </li>
