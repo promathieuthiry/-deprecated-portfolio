@@ -1,15 +1,30 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
+import Portfolio from "../components/portfolio/portfolio"
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
 
-const WorksPage = () => (
+const WorksPage = ({ data }) => (
   <Layout>
     <Seo title="Works" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
+    <Portfolio img={data} featured={false} />
   </Layout>
 )
+
+export const portfolioQuery = graphql`
+  {
+    allFile(filter: { relativeDirectory: { eq: "preview" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData
+          }
+          name
+          ext
+        }
+      }
+    }
+  }
+`
 
 export default WorksPage

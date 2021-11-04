@@ -13,9 +13,8 @@ const IndexPage = ({ data }) => (
     <Seo title="Home" />
     <Hero />
     <Services />
-    <Portfolio img={data} />
+    <Portfolio img={data} featured={true} />
     <Skills />
-    {/* <Contact /> */}
   </Layout>
 )
 

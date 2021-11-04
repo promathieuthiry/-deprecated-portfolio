@@ -10,12 +10,15 @@ export const StyledPortfolioTitle = styled.h3`
   font-size: 3.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
+  padding-top: ${props => !props.featured && "5rem"};
 `
 export const StyledPortfolioDescription = styled.p`
   font-size: 2rem;
   padding: 0rem 0rem 6rem 0rem;
   color: #9ea0ab;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 `
 
 export const StyledPortfolioGrid = styled.div`

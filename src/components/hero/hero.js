@@ -4,7 +4,6 @@ import "../layout/layout.css"
 import ReactLogo from "./reactLogo"
 import WaveGif from "../../images/wave.gif"
 import TypeWriter from "./typeWriter"
-import { gradient_text } from "./hero.module.css"
 
 import {
   StyledHero,

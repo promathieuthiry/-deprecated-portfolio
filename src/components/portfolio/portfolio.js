@@ -15,15 +15,24 @@ import { image } from "./images-portfolio.module.css"
 import { images } from "../data/data"
 import { filterImage, filterImagesFeatured } from "../../helpers/utils"
 
-const Portfolio = ({ img }) => {
+const Portfolio = ({ img, featured }) => {
   return (
     <div id="portfolio_section">
-      <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
+      <StyledPortfolioTitle featured={featured}>Portfolio</StyledPortfolioTitle>
+      <StyledPortfolioDescription>
+        {featured
+          ? "Here are a few projects I've worked on recently"
+          : "I am constantly exploring new technologies and creative designs to develop projects that build on and go beyond my existing knowledge."}
+      </StyledPortfolioDescription>
+
+      {/* <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
       <StyledPortfolioDescription>
         Here are a few projects I've worked on recently.
       </StyledPortfolioDescription>
+
+      I am constantly exploring new technologies and creative designs to develop projects that build on and go beyond my existing knowledge. */}
       <StyledPortfolioGrid>
-        {filterImagesFeatured(images).map(item => {
+        {filterImagesFeatured(images, featured).map(item => {
           const { githubUrl, livesiteUrl, filename, title, description } = item
           return (
             <StyledPortofolioCard key={item.id}>

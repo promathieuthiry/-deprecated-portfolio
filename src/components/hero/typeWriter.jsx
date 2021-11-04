@@ -1,6 +1,6 @@
 import React from "react"
 import Typewriter from "typewriter-effect"
-import { gradient_text } from "./hero.module.css"
+import { gradient_text } from "../../styles/Global.module.css"
 
 export default function TypeWriter() {
   return (

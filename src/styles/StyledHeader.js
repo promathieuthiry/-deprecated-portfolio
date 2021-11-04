@@ -28,14 +28,41 @@ export const StyledHeader = styled.header`
 
   ul {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     list-style-type: none;
 
     @media screen and (max-width: 600px) {
       display: none;
     }
     li {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      display: inline-block;
+      position: relative;
+      color: rgba(250, 250, 250, 1);
+      transition: transform 0.25s ease-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: ${props => props.theme.gradient};
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover {
+        color: rgba(250, 250, 250, 0.8);
+
+        &::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
     }
     div {
       cursor: pointer;

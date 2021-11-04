@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { gradient_text } from "../../styles/global.module.css"
 
 import {
   onLinkClick,
@@ -12,6 +13,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { icon_menu, barswrapper, bars } from "./header.module.css"
+
 const Header = () => {
   const [open, setOpen] = useState(false)
   // console.log(getWindowDimensions())
@@ -40,10 +42,19 @@ const Header = () => {
       {/* Desktop Navbar */}
       <ul>
         <li>
-          <Link to="/works">Works</Link>
+          <Link to="/" activeClassName={gradient_text}>
+            Home
+          </Link>
         </li>
         <li>
-          <div onClick={() => onLink("contact_section")}>Contact</div>
+          <Link to="/works" activeClassName={gradient_text}>
+            Works
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" activeClassName={gradient_text}>
+            Contact
+          </Link>
         </li>
       </ul>
       {/* End Desktop Navbar */}
@@ -65,14 +76,14 @@ const Header = () => {
       {/* Start Mobile Navbar */}
       {open && (
         <div className={barswrapper}>
-          {/* <div className={bars}>
-            <Link to="/404">About</Link>
-          </div> */}
           <div className={bars}>
-            <div onClick={() => onLink("portfolio_section")}>Works</div>
+            <Link to="/">Home</Link>
           </div>
           <div className={bars}>
-            <div onClick={() => onLink("contact_section")}>Contact</div>
+            <Link to="/works">Works</Link>
+          </div>
+          <div className={bars}>
+            <Link to="/contact">Contact</Link>
           </div>
         </div>
       )}

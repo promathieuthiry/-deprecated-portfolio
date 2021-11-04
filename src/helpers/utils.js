@@ -25,6 +25,8 @@ export function filterImage(arr, filename) {
   }
 }
 
-export function filterImagesFeatured(arr) {
-  return arr.filter(item => item.featured)
+export function filterImagesFeatured(arr, featured) {
+  if (featured) {
+    return arr.filter(item => item.featured)
+  } else return arr
 }
