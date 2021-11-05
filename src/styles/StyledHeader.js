@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   position: relative;
   @media screen and (max-width: 600px) {
-    padding: 1rem 0rem;
+    padding: 2.5rem 0rem;
   }
 
   img {
