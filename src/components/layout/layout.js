@@ -5,14 +5,12 @@ import Footer from "./footer/footer"
 import Contact from "../contact/contact"
 import { StyledWrapper } from "../../styles/Global"
 import GlobalStyles from "../../styles/Global"
-import SmoothScroll from "./SmoothScroll"
 import "../../styles/app.css"
 
 const Layout = ({ children }) => {
   return (
     <StyledWrapper>
       <GlobalStyles />
-      <SmoothScroll />
       <Header />
       {children}
       <Contact />
