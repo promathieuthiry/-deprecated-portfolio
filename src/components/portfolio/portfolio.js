@@ -1,18 +1,17 @@
 import * as React from "react"
 
-import { GatsbyImage } from "gatsby-plugin-image"
-
 import {
   StyledPortfolioTitle,
   StyledPortfolioGrid,
   StyledPortofolioCard,
   StyledPortfolioDescription,
+  ImageStyle,
 } from "../../styles/StyledPortfolio"
 
 import ImagesPortfolio from "./images-portfolio"
-import { image } from "./images-portfolio.module.css"
 import { images } from "../data/data"
 import { filterImage, filterImagesFeatured } from "../../helpers/utils"
+import styled from "styled-components"
 
 const Portfolio = ({ img, featured }) => {
   return (
@@ -29,13 +28,13 @@ const Portfolio = ({ img, featured }) => {
           const { githubUrl, livesiteUrl, filename, title, description } = item
           return (
             <StyledPortofolioCard key={item.id}>
-              <ImagesPortfolio codeLink={githubUrl} websiteLink={livesiteUrl}>
-                <GatsbyImage
-                  image={filterImage(img.allFile.edges, filename)}
-                  alt={`Preview ${title}`}
-                  className={image}
-                />
-              </ImagesPortfolio>
+              <ImagesPortfolio
+                allImages={img.allFile.edges}
+                codeLink={githubUrl}
+                websiteLink={livesiteUrl}
+                filename={filename}
+                title={title}
+              ></ImagesPortfolio>
               <div style={{ maxWidth: "60rem" }}>
                 <p>{title}</p>
                 <span>{description}</span>

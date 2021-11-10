@@ -2,15 +2,19 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import { onLinkClick, addOverflow, removeOverflow } from "../../helpers/utils"
-import { StyledHeader, StyledHeaderLink } from "../../styles/StyledHeader"
+import {
+  StyledHeader,
+  StyledHeaderLink,
+  IconMobile,
+  Barswrapper,
+  Bars,
+} from "../../styles/StyledHeader"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
-import { icon_menu, barswrapper, bars } from "./header.module.css"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
-  // console.log(getWindowDimensions())
   function Open() {
     if (open) {
       removeOverflow()
@@ -52,35 +56,33 @@ const Header = () => {
         </li>
       </ul>
       {/* End Desktop Navbar */}
+
+      {/* Mobile icon */}
+
       {open ? (
-        <FontAwesomeIcon
-          icon={faTimes}
-          size="3x"
-          onClick={Open}
-          className={icon_menu}
-        />
+        <IconMobile>
+          <FontAwesomeIcon icon={faTimes} size="3x" onClick={Open} />
+        </IconMobile>
       ) : (
-        <FontAwesomeIcon
-          icon={faBars}
-          size="3x"
-          onClick={Open}
-          className={icon_menu}
-        />
+        <IconMobile>
+          <FontAwesomeIcon icon={faBars} size="3x" onClick={Open} />
+        </IconMobile>
       )}
-      {/* Start Mobile Navbar */}
+
       {open && (
-        <div className={barswrapper}>
-          <div className={bars}>
+        <Barswrapper>
+          <Bars>
             <Link to="/">Home</Link>
-          </div>
-          <div className={bars}>
+          </Bars>
+          <Bars>
             <Link to="/works">Works</Link>
-          </div>
-          <div className={bars}>
+          </Bars>
+          <Bars>
             <Link to="/contact">Contact</Link>
-          </div>
-        </div>
+          </Bars>
+        </Barswrapper>
       )}
+
       {/* End Mobile Navbar */}
     </StyledHeader>
   )

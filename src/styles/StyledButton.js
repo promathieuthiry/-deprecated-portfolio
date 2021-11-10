@@ -16,11 +16,29 @@ export const Button = styled.button`
   &:hover {
     transform: translateY(-3px);
   }
-  &:active {
+
+  @media (max-width: 374px) {
+    font-size: 1.2rem;
+  }
+`
+export const ButtonLink = styled.button`
+  background: ${props =>
+    props.gradient && "linear-gradient(90deg, #86d3ff -49.34%, #e386fd 100%)"};
+  border-radius: 2.8rem;
+  color: #1c3246;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(110%);
   }
 
-  @media only screen and (max-width: 374px) {
-    font-size: 1.2rem;
-    /* padding: 1rem 2rem; */
+  @media (max-width: 450px) {
+    padding: 1rem 1.5rem;
   }
 `

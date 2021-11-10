@@ -52,7 +52,7 @@ export const images = [
       "Building an API, handling CRUD operations, authentification with JWT, connecting database with MySQL, React with Node, password encrypted with bcrypt, data validation with Joi, Database deployed on Heroku",
     filename: "preview-project-login.jpg",
     githubUrl: "https://github.com/promathieuthiry/login-user-server",
-    livesiteUrl: "https://login-user-exp.netlify.app/login",
+    livesiteUrl: "https://login-user-exp.netlify.app",
     featured: true,
   },
   {

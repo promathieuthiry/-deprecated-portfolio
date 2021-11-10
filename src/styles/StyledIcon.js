@@ -1,11 +1,6 @@
 import React from "react"
 
 import styled from "styled-components"
-import {
-  faTwitter,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const IconElement = styled.a.attrs(props => ({
@@ -14,10 +9,10 @@ export const IconElement = styled.a.attrs(props => ({
   href: props.href,
 }))``
 
-export const CustomIcon = ({ icon, href }) => {
+export const CustomIcon = ({ icon, href, size }) => {
   return (
     <IconElement href={href}>
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} size={size} />
     </IconElement>
   )
 }

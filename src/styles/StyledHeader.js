@@ -74,3 +74,61 @@ export const StyledHeaderLink = styled(props => <Link {...props} />)`
   align-items: center;
   flex: 1;
 `
+
+const IconMobileAwesome = styled.span`
+  display: none;
+  opacity: 0;
+
+  @media (max-width: 600px) {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+  }
+`
+export const IconMobile = ({ children }) => {
+  return <IconMobileAwesome>{children}</IconMobileAwesome>
+}
+
+export const Barswrapper = styled.div`
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    background-color: #0d0e10;
+    height: calc(100vh - 6.5rem);
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+  }
+`
+
+export const Bars = styled.div`
+  display: none;
+
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    color: #9ea0ab;
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    border-bottom: 0.1rem solid #9ea0ab;
+    transition: all 0.5s ease-out;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:nth-child(1) {
+    border-top: 0.1rem solid #9ea0ab;
+  }
+`

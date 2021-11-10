@@ -30,3 +30,7 @@ export function filterImagesFeatured(arr, featured) {
     return arr.filter(item => item.featured)
   } else return arr
 }
+
+export function openInNewTab(url) {
+  window.open(url, "_blank").focus()
+}
