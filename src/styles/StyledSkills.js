@@ -61,7 +61,7 @@ export const StyledCheckboxWrapper = styled.div`
   div {
     width: 5.6rem;
     height: 3.2rem;
-    background: linear-gradient(90deg, #86d3ff -49.34%, #e386fd 100%);
+    background: ${props => props.theme.gradient};
     border-radius: 1.6rem;
     position: relative;
     transition: all 0.5s ease-out;

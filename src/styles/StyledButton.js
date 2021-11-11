@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Button = styled.button`
-  background: linear-gradient(90deg, #86d3ff -49.34%, #e386fd 100%);
+  background: ${props => props.theme.gradient};
   box-shadow: 0.2rem 0.3rem 0.6rem rgba(0, 0, 0, 0.15925);
   border-radius: 2.8rem;
   color: #1c3246;
@@ -22,8 +22,7 @@ export const Button = styled.button`
   }
 `
 export const ButtonLink = styled.button`
-  background: ${props =>
-    props.gradient && "linear-gradient(90deg, #86d3ff -49.34%, #e386fd 100%)"};
+  background: ${props => props.gradient && props.theme.gradient};
   border-radius: 2.8rem;
   color: #1c3246;
   border: none;

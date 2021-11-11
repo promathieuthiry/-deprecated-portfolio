@@ -6,7 +6,7 @@ import styled from "styled-components"
 const FirstRow = styled.div`
   display: flex;
   justify-content: space-between;
-  row-gap: 1rem;
+  gap: 1rem;
   width: 100%;
 
   @media (max-width: 720px) {
@@ -18,7 +18,6 @@ const Label = styled.label`
   font-size: 1.4rem;
   color: #9ea0ab;
   display: block;
-  width: 100%;
 `
 
 const Input = styled.input`
@@ -30,7 +29,11 @@ const Input = styled.input`
   display: inline-block;
   border: 0.1rem solid #07070a;
   color: #b9b9ba;
-  width: 100%;
+  width: 25rem;
+
+  @media (max-width: 1150px) {
+    width: 100%;
+  }
 `
 
 const TextArea = styled.textarea`
@@ -58,12 +61,6 @@ const ThirdRow = styled.div`
     display: flex;
     justify-content: center;
   }
-`
-
-const CoverWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 const Title = styled.h3`
