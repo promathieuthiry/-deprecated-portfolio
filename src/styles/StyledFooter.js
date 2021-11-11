@@ -30,6 +30,10 @@ export const StyledFooter = styled.footer`
       transform: scale(1.1);
     }
   }
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 `
 
 export const EmailWrapper = styled.div`
@@ -60,9 +64,14 @@ const StyledBlob = styled(Blob)`
   position: absolute;
   top: -3.2rem;
   right: 25rem;
-  @media only screen and (max-width: 675px) {
+  @media (max-width: 675px) {
     top: -4.8rem;
     right: 18rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+    right: -7rem;
   }
 `
 
@@ -81,8 +90,12 @@ export const Link = styled.a.attrs(props => ({
   font-weight: bold;
   padding-left: 5rem;
 
-  @media only screen and (max-width: 675px) {
+  @media (max-width: 675px) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 400px) {
+    display: none;
   }
 `
 

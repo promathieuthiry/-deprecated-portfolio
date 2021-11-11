@@ -29,8 +29,17 @@ export const StyledPortfolioGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+
+  @media only screen and (max-width: 500px) {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  @media only screen and (max-width: 400px) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 `
 
